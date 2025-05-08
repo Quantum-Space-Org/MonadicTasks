@@ -105,7 +105,7 @@ public class OrderProcessor
             return TaskMonad<Order>.Fail(new InvalidOperationException("Payment failed due to invalid amount."));
         }
     }
-
+  
     public TaskMonad<string> ShipOrder(Order order)
     {
         return TaskMonad<string>.Unit($"Order {order.Id} shipped successfully.");
